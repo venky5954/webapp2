@@ -1,35 +1,23 @@
 <!DOCTYPE html>
 <html>
+<style>
+div {padding:10px;}
+</style>
 <body>
 
-<p>Count numbers: <output id="result"></output></p>
-<button onclick="startWorker()">Start Worker</button> 
-<button onclick="stopWorker()">Stop Worker</button>
+<h1>Colors can be set using color names</h1>
 
-<p><strong>Note:</strong>   welcome to jenkins.</p>
+<div style="background-color:red">
+  <h1 style="color:white">Heading</h1>
+</div>
 
-<script>
-var w;
+<div style="background-color:yellow">
+  <h1 style="color:blue">Heading</h1>
+</div>
 
-function startWorker() {
-  if(typeof(Worker) !== "undefined") {
-    if(typeof(w) == "undefined") {
-      w = new Worker("demo_workers.js");
-    }
-    w.onmessage = function(event) {
-      document.getElementById("result").innerHTML = event.data;
-    };
-  } else {
-    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
-  }
-}
-
-function stopWorker() { 
-  w.terminate();
-  w = undefined;
-}
-</script>
+<div style="background-color:blue">
+  <h1 style="color:yellow">Heading</h1>
+</div>
 
 </body>
 </html>
-
