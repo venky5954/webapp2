@@ -16,7 +16,7 @@ div {padding:10px;}
 </div>
 
 <div style="background-color:blue">
-  <h1 style="color:yellow">Heading</h1>
+  <h1 style="color:yello">Heading</h1>
 </div>
 
 </body>
